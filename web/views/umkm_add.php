@@ -52,6 +52,20 @@
                         </div>
                     </div>
                     <div class="row form-group">
+                        <div class="col-md-3">Latitude</div>
+                        <div class="col-md-1">:</div>
+                        <div class="col-md-4">
+                            <input type="text" name="lat" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-3">Longitude</div>
+                        <div class="col-md-1">:</div>
+                        <div class="col-md-4">
+                            <input type="text" name="lng" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
                         <div class="col-md-12">
                             <button type="submit" class="btn btn-primary btn-block">Simpan</button>
                         </div>

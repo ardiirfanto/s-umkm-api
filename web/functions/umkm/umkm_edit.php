@@ -19,6 +19,8 @@ $nama = $_POST['nama'];
 $alamat = $_POST['alamat'];
 $hp = $_POST['hp'];
 $pemilik = $_POST['pemilik'];
+$lat = $_POST['lat'];
+$lng = $_POST['lng'];
 try {
 
     if ($password != '') {
@@ -35,7 +37,9 @@ try {
             umkm_name='$nama',
             umkm_address='$alamat',
             phone='$hp',
-            owner='$pemilik'
+            owner='$pemilik',
+            lat='$lat',
+            lng='$lng'
             WHERE user_id='$user_id'
             "
         );
@@ -65,7 +69,9 @@ try {
                 umkm_address='$alamat',
                 phone='$hp',
                 owner='$pemilik',
-                umkm_logo='$nama_file'
+                umkm_logo='$nama_file',
+                lat='$lat',
+                lng='$lng'
                 WHERE user_id='$user_id'
                 "
             );

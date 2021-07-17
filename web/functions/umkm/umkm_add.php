@@ -18,6 +18,9 @@ $nama = $_POST['nama'];
 $alamat = $_POST['alamat'];
 $hp = $_POST['hp'];
 $pemilik = $_POST['pemilik'];
+$lat = $_POST['lat'];
+$lng = $_POST['lng'];
+
 try {
 
     $q_user = $sql->query(
@@ -36,14 +39,17 @@ try {
     if (move_uploaded_file($tmp, $location . $nama_file)) {
 
         $q = $sql->query(
-            "INSERT INTO umkm(user_id,umkm_name,umkm_address,umkm_logo,owner,phone)
+            "INSERT INTO umkm(user_id,umkm_name,umkm_address,umkm_logo,owner,phone,lat,lng)
             VALUES(
                 '$get_user[user_id]',
                 '$nama',
                 '$alamat',
                 '$nama_file',
                 '$pemilik',
-                '$hp'
+                '$hp',
+                '$lat',
+                '$lng'
+
             )
             "
         );

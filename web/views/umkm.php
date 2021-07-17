@@ -27,6 +27,7 @@ $u = new Umkm();
                                     <th>Pemilik</th>
                                     <th>Alamat</th>
                                     <th>Np.HP</th>
+                                    <th>Lokasi</th>
                                     <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
@@ -46,6 +47,7 @@ $u = new Umkm();
                                         <td><?= $v['owner'] ?></td>
                                         <td><?= $v['umkm_address'] ?></td>
                                         <td><?= $v['phone'] ?></td>
+                                        <td><a target="_blank" href="http://maps.google.com/maps?q=<?= $v['lat']?>,<?=$v['lng'] ?>">Lokasi</a></td>
                                         <td>
                                             <a href="home?p=umkm_edit&id=<?= $v['user_id'] ?>" type="button" class="btn btn-info">Edit</a>
                                             <button onclick="del(<?= $v['user_id'] ?>)" type="button" class="btn btn-danger">
