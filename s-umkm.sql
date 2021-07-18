@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 16 Jul 2021 pada 17.48
+-- Waktu pembuatan: 18 Jul 2021 pada 00.17
 -- Versi server: 5.7.24
 -- Versi PHP: 7.4.10
 
@@ -83,16 +83,18 @@ CREATE TABLE `umkm` (
   `umkm_address` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `umkm_logo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `owner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lat` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lng` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `umkm`
 --
 
-INSERT INTO `umkm` (`umkm_id`, `user_id`, `umkm_name`, `umkm_address`, `umkm_logo`, `owner`, `phone`) VALUES
-(3, 8, 'Mina Jaya', 'Pati', 'UMKM_20210716170452.png', 'Minarti', '089777666555'),
-(4, 9, 'Yudi Jaya Mobile', 'Jepang', 'UMKM_20210716170531.jpg', 'Yudi Maulana', '081234555678');
+INSERT INTO `umkm` (`umkm_id`, `user_id`, `umkm_name`, `umkm_address`, `umkm_logo`, `owner`, `phone`, `lat`, `lng`) VALUES
+(3, 8, 'Mina Jaya', 'Pati', 'UMKM_20210716170452.png', 'Minarti', '089777666555', '-6.8303395', '110.772311'),
+(4, 9, 'Yudi Jaya Mobile', 'Jepang', 'UMKM_20210716170531.jpg', 'Yudi Maulana', '081234555678', '-6.8234407', '110.8337673');
 
 -- --------------------------------------------------------
 
